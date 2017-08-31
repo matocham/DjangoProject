@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">O</span>ddaj głos</h1>
+<form action="{% url 'vote' vot_id %}" method="post">
+
+		<span class='title'>{{form.voting.nazwa}}</span>
+
+	<span class='desc'>{{form.voting.opis}}</span>
+	<span class='desc'>Możesz oddać maksymalnie {{form.voting.maxGlosow}} głos/y/ów.</span>
+
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" value="Głosuj" />
+</form>
+
+{%endblock%}

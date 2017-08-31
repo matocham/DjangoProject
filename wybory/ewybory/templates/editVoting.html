@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">E</span>dycja głosowania</h1>
+<form action="{% url 'votingEdit' vot_id %}" method="post">
+    {% csrf_token %}
+    {{ regform }}
+    <input type="submit" value="Zapisz zmiany" />
+</form>
+{%endblock%}

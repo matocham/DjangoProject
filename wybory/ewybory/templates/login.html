@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{%if not user.is_authenticated %}
+<h1><span class="green bigl">Z</span>aloguj się do serwisu</h1>
+<form action="/ewybory/login{% if next|length > 2 %}?next={{next}}{%endif%}" method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    <input type="submit" value="Login" />
+</form>
+{%else%}
+<h2>Tylko niezalogowani użytkownicy mogą zobaczyć tą stronę</h2>
+<a href="{% url 'homepage' %}">Do strony głównej</a>
+{%endif%}
+{%endblock%}

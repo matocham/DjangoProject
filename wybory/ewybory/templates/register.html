@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">R</span>ejestracja</h1>
+<form action="/ewybory/register" method="post">
+    {% csrf_token %}
+    {{ reg1form }}
+    {{ regform }}
+    <br/>
+    <input type="submit" value="Rejestracja" />
+</form>
+{%endblock%}

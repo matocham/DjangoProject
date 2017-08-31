@@ -1,0 +1,33 @@
+
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">G</span>łosuję</h1>
+{% if votings %}
+<table>
+
+	{%for vot in votings%}
+    <tr>
+        <td class='first'><a href="{% url 'votingDetails' vot.id %}">{{vot.nazwa}}</a></td>
+        <td class='second'>{{vot.opis}}</td>
+        <td class='third'>
+            {% if vot.do < now%}
+	            <a class="button" href="{% url 'votingSummary' vot.id %}">Podsumowanie</a>
+	        {%else%}
+	            {%if vot.v.zaglosowal == False%}
+		            <a class="button" href="{% url 'vote' vot.id %}">Głosuj</a>
+	        {%else%}
+	                <span style='color:red;font-weight:bold'>Oddałeś już swój głos</span>
+	        {%endif%}
+	{%endif%}
+        </td>
+
+
+    </tr>
+	{%endfor%}
+</table>
+{%else%}
+<br>
+<h3>Nie możesz głosować w żadnym głosowaniu</h3>
+{%endif%}
+{%endblock%}

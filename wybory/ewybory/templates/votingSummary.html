@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{%if voting != None%}
+<h1><span class="green bigl">P</span>odsumowanie głosowania</h1>
+<table>
+    <tr>
+        <td class='firstII'>
+            Nazwa głosowania
+        </td>
+        <td class='secondII'>
+            {{voting.nazwa}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Opis głosowania
+        </td>
+        <td class='secondII'>
+            {{voting.opis}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Głosowanie założył
+        </td>
+        <td class='secondII'>
+            {{voting.moderator.user.get_full_name}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Zakończono
+        </td>
+        <td class='secondII'>
+            {{voting.do}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Uprawnionych do głosowania było
+        </td>
+        <td class='secondII'>
+            {{v_count}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Zagłosowało
+        </td>
+        <td class='secondII'>
+            {{voted_count}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Kandydowało osób
+        </td>
+        <td class='secondII'>
+            {{voting.candidate_set.count}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Lista kandydatów
+        </td>
+        <td class='secondII'>
+            {%for k in voting.candidate_set.all%}
+                {{k.osoba.user.get_full_name}}&nbsp;&nbsp;
+            {%endfor%}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Wygrali
+        </td>
+        <td class='secondII'>
+            {%for w in winners%}
+                {{w.osoba.user.get_full_name}} ({{w.wynik}} głosów)&nbsp;&nbsp;
+            {%endfor%}
+        </td>
+    </tr>
+</table>
+	<a class="button" href="{% url 'pdf' voting.id %}">Podsumowanie w formacie PDF</a>
+{%else%}
+<h3>Nie masz uprawnień aby zobaczyć to głosowanie</h3>
+{%endif%}
+{%endblock%}
+

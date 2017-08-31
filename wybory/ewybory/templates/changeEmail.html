@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+	<h1><span class="green bigl">P</span>odaj nowy e-mail</h1>
+<form action="/ewybory/emailChange" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Zapisz zmiany" />
+</form>
+{%endblock%}

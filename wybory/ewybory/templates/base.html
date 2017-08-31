@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{%load staticfiles%}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Wybory</title>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-2" />
+		<link rel="stylesheet" href="{%static 'css/shop.css'%}" type="text/css" media="screen, projection" />
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<div class="topong">
+					<div class="pad">
+						<img src="{%static 'images/account.gif'%}" alt="Account" />
+						{%if not user.is_authenticated %}
+						<h4><a href="register">rejestracja </a>&nbsp;&verbar;&nbsp;<a href="login">zaloguj</a></h4>
+						{%else%}
+						<h4><a href="accountDetails">moje konto </a>&nbsp;&verbar;&nbsp;<a href="logout">wyloguj</a></h4>
+						{%endif%}
+						<br />
+						<span class="txt">{{user.username}}</span>
+					</div>
+				</div>
+				<h1> <a href="home"><span class="green bigl">T</span>wój<span class="green bigl">W</span>ybór</h1></a>
+				<span class="slogan">Tu głos się liczy</span>
+			</div>
+			<div id="menu">
+				<div class="pad">
+
+					<div class="submit">
+						<ul>
+							<li>
+								<a href="home"><span>Strona główna</span></a>
+							</li>
+							<li>
+
+								<a href="myVotings"><span>Moje głosowania</span></a>
+
+							</li>
+							<li>
+								<a href="votings"><span>Oddaj głos</span></a>
+							</li>
+							<li>
+								<a href="participate"><span>Kandyduję</span></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class='maincontent'>
+				{%block content%}
+
+				{%endblock%}
+			</div>
+
+		</div>
+	</body>
+</html>

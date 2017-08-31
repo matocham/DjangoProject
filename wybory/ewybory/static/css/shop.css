@@ -1,0 +1,404 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2015-11-21, 12:31:59
+    Author     : dominoo
+*/
+
+h3{
+	margin-bottom: 20px;
+
+}
+* {
+padding : 0;
+margin : 0;
+}
+body {
+background : #fafafa;
+font-family : Tahoma, Verdana, Arial, sans-serif;
+font-size : 8pt;
+color : #585858;
+}
+
+
+img {
+border : 0;
+float : left;
+margin-right : 10px;
+}
+
+
+.green {
+color : #36be00;
+}
+.bigl {
+font-size : 1.2em;
+}
+.bold {
+font-weight : bold;
+}
+
+#header h1 {
+background : #fafafa;
+font-family : "Tahoma", Verdana, Arial, sans-serif;
+font-size : 3em;
+color : #585858;
+font-weight : normal;
+padding : 0;
+margin : 0;
+}
+
+#header {
+margin : 0;
+padding : 0;
+width : 100%;
+background : inherit;
+color : #585858;
+height : 66px;
+}
+
+#header .topong {
+background : #fafafa bottom;
+height : 66px;
+width : 220px;
+float : right;
+}
+#header .topong .pad {
+padding : 15px 5px 0 30px;
+}
+#header .topong .txt {
+padding : 0;
+color : #a5a5a5;
+}
+#header .slogan {
+color : #868686;
+margin : 0;
+padding : 0;
+background : #fafafa;
+font : bold 1em "Tahoma", Verdana, Arial, sans-serif;
+padding-left : 2px;
+}
+#header h4 {
+
+font : bold 1em "Tahoma", verdana, Arial;
+}
+
+#header h4 a:link, h4 a:visited {
+    text-decoration:none;
+    color : #3399ff;
+}
+#header h4 a:hover {
+    text-decoration : none;
+    color: #337aa1;
+}
+#pad{
+	display: inline-block;
+}
+#menu {
+margin : 0 0;
+padding : 0;
+background : #4b7da7 url(../images/menubg.gif) repeat-x top;
+color : #fff;
+width : 100%;
+height : 40px;
+}
+#menu .pad {
+	display:inline-block;
+padding-top : 12px;
+}
+#menu a, #menu a:visited {
+color : #fff;
+text-decoration : none;
+background : inherit;
+}
+#menu .submit {
+vertical-align : bottom;
+}
+#menu .submit ul {
+margin : 0;
+padding : 0 10px 0 0;
+list-style : none;
+}
+#menu .submit li {
+display : inline;
+margin : 0;
+padding : 0;
+}
+
+#menu .submit a {
+float : left;
+background : transparent;
+margin : 0;
+padding : 0 0 0 0;
+text-decoration : none;
+}
+#menu .submit a span {
+float : left;
+background : url(../images/menusep.gif) no-repeat left;
+color : #fff;
+font-weight : bold;
+display : block;
+padding : 0 15px 0 15px;
+margin-right : 2px;
+}
+#menu .submit a span {
+float : none;
+}
+#menu .submit li a span:hover {
+  color: #8ADF88;
+}
+
+#menu .submit li a span:hover {
+  color: #8ADF88;
+}
+
+/************************ content *************************/
+
+#content {
+
+padding : 0;
+margin : 15px auto;
+width : 900px;
+background : #fafafa;
+}
+
+.maincontent p {
+margin-top : 10px;
+}
+
+.maincontent{
+    font : normal 10pt "Segoe UI","Trebuchet MS";
+}
+
+.maincontent h3{
+    color:red;
+}
+
+h1{
+    margin-bottom:20px;
+    margin-top:15px;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size:20px;
+}
+
+h6 {
+font : bold 1.6em "Tahoma", verdana, Arial;
+color : #585858;
+background : transparent;
+margin-bottom : 4px;
+border-bottom : 1px solid #e3eaef;
+}
+
+h5{
+	color: #4B7DA7;
+	font-size: 16px;
+	font-style: normal;
+}
+
+#warring{
+	color: red;
+	font-style:normal;
+
+	font-size: 14px;
+}
+.detailss{
+    color: #666666;
+	font-size: 16px;
+}
+.greens{
+	color: #36BE00;
+	font-size: 16px;
+}
+
+span.title{
+    display:block;
+    color: #666666;
+    font-size: 18px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+span.desc{
+    display:block;
+    color: #666666;
+    font-size: 14px;
+    font-weight:normal;
+    margin-bottom:25px;
+}
+
+
+/********************* formularze ******************************/
+
+form{
+	margin-top:20px;
+	display: block;
+	font-size:10pt;
+	font-family: "Segoe UI","Trebuchet MS";
+	font-weight:bold;
+}
+
+input:not([type='submit']),textarea,select{
+border:solid;
+/*color : #2d8f00;*/
+border-color:#3399ff;
+border-width:2px;
+border-radius:5px 5px;
+
+display: block;
+background-color:white;
+}
+
+form > label{
+	display: block;
+	margin-top:10px;
+}
+
+form ul.errorlist{
+                list-style-type: none ;
+                color:red;
+                font-weight:normal;
+                margin-top:-7px;
+            }
+
+ul#id_kandydaci{
+    list-style-type:none;
+}
+
+ul#id_kandydaci li{
+    line-height:2em;
+
+}
+ul#id_kandydaci li input{
+    display:inline;
+}
+
+form > label[for='id_kandydaci_0']{
+    margin-bottom:10px;
+    font-size:1.4em;
+    font-weight:normal;
+}
+
+span.helptext{
+    font-weight:normal;
+    display:block;
+    margin-top:-15px;
+}
+
+/************************* linki *******************************/
+
+#header a:link,a:visited,a:hover{
+    text-decoration:none;
+    color:black;
+}
+
+a.button:link,a.button:visited {
+                font-family: monospace,Arial;
+                font-size: 1em;
+                background: #3399ff;
+                border-color: #3399ff;
+                border-radius: 5px 5px;
+                color: #ffffff;
+                height: 1.2em;
+                display: inline-block;
+                padding-left: 7px;
+                padding-right: 7px;
+                text-decoration: none;
+                vertical-align: central;
+            }
+
+            a.button:hover{
+
+                background-color: #337aff
+            }
+
+            form input[type='submit']:last-of-type {
+                border:solid;
+                font-family: monospace,Arial;
+                background: #3399ff;
+                border-color: #3399ff;
+                border-radius: 5px 5px;
+                color: #ffffff;
+                margin-top:10px;
+                font-size:1.2em;
+            }
+
+            form input[type='submit']:hover{
+                background-color: #337aff;
+            }
+
+/************************** tabela ***********************************/
+
+            tr:nth-of-type(n){
+                background: #ebebeb;
+            }
+            tr:nth-of-type(2n){
+                background: white;
+            }
+
+            table tr:last-child td:first-child {
+                -moz-border-radius-bottomleft:10px;
+                -webkit-border-bottom-left-radius:10px;
+                border-bottom-left-radius:10px
+            }
+
+            table tr:last-child td:last-child {
+                -moz-border-radius-bottomright:10px;
+                -webkit-border-bottom-right-radius:10px;
+                border-bottom-right-radius:10px
+            }
+
+            table tr:first-child td:first-child {
+                -moz-border-radius-topleft:10px;
+                -webkit-border-top-left-radius:10px;
+                border-top-left-radius:10px
+            }
+
+            table tr:first-child td:last-child {
+                -moz-border-radius-topright:10px;
+                -webkit-border-top-right-radius:10px;
+                border-top-right-radius:10px
+            }
+            td.first{
+                width:25%;
+                font-weight: bold;
+            }
+            td.second{
+                width: 60%;
+            }
+
+            td.firstII{
+                width:25%;
+                font-weight: bold;
+            }
+            td.secondII{
+                width: 75%;
+            }
+
+            td.third{
+                width:15%;
+            }
+
+            td.first a:link,a:visited{
+                text-decoration: none;
+                color:#666666;
+            }
+
+            td.first a:hover{
+                text-decoration:underline;
+            }
+
+            table tr td {
+                padding: 5px;
+            }
+
+            table{
+                width:100%;
+                 font-family: "Segoe UI","Trebuchet MS";
+                color: #666666;
+                font-size: 14px;
+                border-spacing: 0px;
+                margin-bottom:20px;
+            }

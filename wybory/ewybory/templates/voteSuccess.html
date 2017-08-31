@@ -1,0 +1,7 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">T</span>wój głos w {{voting}} został zapisany</h1>
+Bedziesz mógł zobaczyć statystyki głosowania po jego zakończeniu
+<a href="{% url 'homepage' %}">Do strony głównej</a>
+{%endblock%}

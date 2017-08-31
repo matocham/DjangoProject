@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">S</span>zczegóły głosowania</h1>
+{%if voting != None%}
+<table>
+    <tr>
+        <td class='firstII'>
+            Nazwa głosowania
+        </td>
+        <td class='secondII'>
+            {{voting.nazwa}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Opis głosowania
+        </td>
+        <td class='secondII'>
+            {{voting.opis}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Moderator
+        </td>
+        <td class='secondII'>
+            {{voting.moderator.user.get_full_name}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Czas trwania od:
+        </td>
+        <td class='secondII'>
+            {{voting.od}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            do:
+        </td>
+        <td class='secondII'>
+            {{voting.do}}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Kandydaci
+        </td>
+        <td class='secondII'>
+            {%for k in voting.kandydaci.all%}
+                {{k.user.get_full_name}}&nbsp;&nbsp;
+            {%endfor%}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Uprawnieni
+        </td>
+        <td class='secondII'>
+            {%for k in voting.uprawnieni.all%}
+                {{k.user.get_full_name}}&nbsp;&nbsp;
+            {%endfor%}
+        </td>
+    </tr>
+    <tr>
+        <td class='firstII'>
+            Maksymalna liczba głosów
+        </td>
+        <td class='secondII'>
+            {{voting.maxGlosow}}
+        </td>
+    </tr>
+</table>
+
+{%else%}
+<h3>Nie masz uprawnień aby zobaczyć to głosowanie</h3>
+{%endif%}
+{%endblock%}

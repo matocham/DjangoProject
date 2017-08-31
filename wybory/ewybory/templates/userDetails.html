@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1><span class="green bigl">D</span>ane użytkownika</h1>
+
+<table>
+    <tr>
+        <td class='first'>
+            Login
+        </td>
+        <td class='second'>
+            {{user.username}}
+        </td>
+    </tr>
+    <tr>
+        <td class='first'>
+            Imię
+        </td>
+        <td class='second'>
+            {{user.first_name}}
+        </td>
+    </tr>
+    <tr>
+        <td class='first'>
+            Nazwisko
+        </td>
+        <td class='second'>
+            {{user.last_name}}
+        </td>
+    </tr>
+    <tr>
+        <td class='first'>
+            Adres e-mail
+        </td>
+        <td class='second'>
+            {{user.email}}
+        </td>
+    </tr>
+    <tr>
+        <td class='first'>
+            PESEL
+        </td>
+        <td class='second'>
+            {{user.profile.pesel}}
+        </td>
+    </tr>
+</table>
+
+<a class="button" href="passwordChange">Zmień hasło</a>
+<a class="button" href="emailChange">Zmień adres e-mail</a>
+{%endblock%}
